@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  vars:
+    state: present
+
+  tasks:
+    - homebrew: name=kubectl state={{ state }}
+
+    - homebrew_cask: name=minikube state={{ state }}
+
